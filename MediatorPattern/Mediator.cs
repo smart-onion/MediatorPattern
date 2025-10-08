@@ -7,9 +7,9 @@ namespace MediatorPattern;
 
 public class Mediator : IMediator
 {
-    private ConcurrentDictionary<Type, Type?> _events;
+    private ConcurrentDictionary<Type, Type?> _events = new();
 
-    private ConcurrentDictionary<Type, Type?> _actions;
+    private ConcurrentDictionary<Type, Type?> _actions = new();
 
     public Mediator(Assembly assembly)
     {
